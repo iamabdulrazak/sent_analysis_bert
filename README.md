@@ -1,2 +1,2 @@
-# sent_analysis_bert
-Sentiment Analysis using Bert
+# Sentiment Analysis
+Sentiment Analysis using Bert Model
