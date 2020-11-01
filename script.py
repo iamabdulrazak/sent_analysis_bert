@@ -237,3 +237,7 @@ for epoch in tqdm(range(1, epochs+1)):
     val_f1 = f1_score_func(predictions, true_vals)
     tqdm.write(f'Validation loss: {val_loss}')
     tqdm.write(f'F1 Score (Weighted): {val_f1}')
+
+# printing the output prediction!
+_, predictions, true_vals = evaluate(dataloader_validation)
+accuracy_per_class(predictions, true_vals)
