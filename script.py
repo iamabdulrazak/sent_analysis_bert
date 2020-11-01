@@ -96,3 +96,20 @@ dataset_val = TensorDataset(input_ids_val, attention_masks_val, labels_val)
 
 print(f'Train Dataset: {len(dataset_train)}')
 print(f'Test Dataset: {len(dataset_val)}')
+
+# Setting up BERT Pretrained Model
+model = BertForSequenceClassification.from_pretrained("bert-base-uncased",
+                                                      num_labels=len(label_dict),
+                                                      output_attentions=False,
+                                                      output_hidden_states=False)
+
+# Creating Data Loaders
+batch_size = 32
+
+dataloader_train = DataLoader(dataset_train,
+                              sampler=RandomSampler(dataset_train),
+                              batch_size=batch_size)
+
+dataloader_validation = DataLoader(dataset_val,
+                                   sampler=SequentialSampler(dataset_val),
+                                   batch_size=batch_size)
