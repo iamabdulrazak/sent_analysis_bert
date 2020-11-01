@@ -19,7 +19,6 @@ try:
 except Exception as e:
   print('Packages are Missing! \n {}'.format(e))
 
-
 # Exploratory Data Analysis and Preprocessing
 # Small Twitter Dataset!!
 df = pd.read_csv('data/smile.csv', names=['id', 'text', 'category'])
@@ -43,3 +42,18 @@ for index, possible_label in enumerate(possible_labels):
 
 df['label'] = df.category.replace(label_dict)
 df.head()
+
+# Training/Validation Split
+# spliting data into train and validation!
+X_train, X_val, y_train, y_val = train_test_split(df.index.values, df.label.values,
+				 		  test_size=0.15, random_state=17,
+						  stratify=df.label.values)
+# creating a data_type comlumn!
+# to see how much of the dataset goes to the train and test(validation)!
+df['data_type'] = ['not_set']*df.shape[0]
+
+df.loc[X_train, 'data_type'] = 'train'
+df.loc[X_val, 'data_type'] = 'val'
+
+df.groupby(['category', 'label', 'data_type']).count()
+
