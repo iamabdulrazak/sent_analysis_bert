@@ -113,3 +113,17 @@ dataloader_train = DataLoader(dataset_train,
 dataloader_validation = DataLoader(dataset_val,
                                    sampler=SequentialSampler(dataset_val),
                                    batch_size=batch_size)
+
+# Setting Up Optimizer and Scheduler
+# we gonna use Adam as our optimizer!
+optimizer = AdamW(model.parameters(),
+                  lr=1e-05,
+                  eps=1e-12)
+
+epochs = 5
+
+scheduler = get_linear_schedule_with_warmup(optimizer,
+                                            num_warmup_steps=0,
+                                            num_training_steps=len(dataloader_train)*epochs)
+
+
