@@ -20,7 +20,7 @@ Sentiment Analysis using Bert Model
   <tr>
     <td class="tg-yw4l">Torch</td>
     <td class="tg-yw4l">PyTorch is a Python package that provides two high-level features:
-      <ul>
+      <ul><br>
         <li>Tensor computation (like NumPy) with strong GPU acceleration</li>
         <li>Deep neural networks built on a tape-based autograd system</li>
       </ul>
@@ -39,7 +39,7 @@ Sentiment Analysis using Bert Model
  </tr>
  
  <tr>
-    <td class="tg-yw4l">TQDM</td>
+    <td class="tg-yw4l">tqdm</td>
     <td class="tg-yw4l">Fast, Extensible Progress Meter</td>
     <td class="tg-yw4l"><a href="https://pypi.org/project/tqdm/">
      <p>PyPI</p>
@@ -58,6 +58,6 @@ Sentiment Analysis using Bert Model
     <td class="tg-yw4l">Sklearn</td>
     <td class="tg-yw4l"> Simple and efficient tools for predictive data analysis</td>
     <td class="tg-yw4l"><a href="https://scikit-learn.org/stable/index.html">
-     <p>PyPI</p>
+     <p>Website</p>
     </a></td>
   </tr>
