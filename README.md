@@ -32,7 +32,7 @@ Sentiment Analysis using Bert Model
 
 <tr>
     <td class="tg-yw4l">Pandas</td>
-    <td class="tg-yw4l">pandas is a Python package that provides fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real world data analysis in Python. Additionally, it has the broader goal of becoming the most powerful and flexible open source data analysis / manipulation tool available in any language. It is already well on its way toward this goal.</td>
+    <td class="tg-yw4l">pandas is a Python package that provides fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive.</td>
     <td class="tg-yw4l"><a href="https://pypi.org/project/pandas/">
      <p>PyPI</p>
     </a></td>
